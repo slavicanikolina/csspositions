@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pozicioniranje s Tekstom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        /* Static pozicija (default) */
+        .static-text {
+            position: static;  /* Default pozicija */
+            font-size: 20px;
+            color: #FF6347;
+            margin: 20px;
+        }
+
+        /* Relative pozicija */
+        .relative-text {
+            position: relative;
+            font-size: 20px;
+            color: #4682B4;
+            top: 30px;  /* Pomaknut će tekst 30px prema dolje */
+            left: 30px; /* Pomaknut će tekst 30px prema desno */
+        }
+
+        /* Absolute pozicija */
+        .absolute-text {
+            position: absolute;
+            font-size: 20px;
+            color: #32CD32;
+            top: 150px; /* 150px od vrha */
+            left: 150px; /* 150px od lijeve strane */
+        }
+
+        /* Fixed pozicija */
+        .fixed-text {
+            position: fixed;
+            font-size: 20px;
+            color: #FFD700;
+            top: 20px;
+            left: 20px;
+        }
+
+        /* Z-index pozicioniranje */
+        .zindex-text-1 {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(255, 99, 71, 0.8);
+            top: 200px;
+            left: 200px;
+            z-index: 1;
+        }
+
+        .zindex-text-2 {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(50, 205, 50, 0.8);
+            top: 250px;
+            left: 250px;
+            z-index: 2;
+        }
+
+        .zindex-text-3 {
+            position: absolute;
+            font-size: 20px;
+            color: rgba(70, 130, 180, 0.8);
+            top: 300px;
+            left: 300px;
+            z-index: 3;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p class="static-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus turpis et felis congue rhoncus. Etiam tempor nibh justo, eu congue lectus varius vel. Praesent iaculis consequat nibh non dictum. Pellentesque sed orci at mi volutpat ullamcorper. Vestibulum ut tortor dignissim, tincidunt dolor at, molestie risus. Quisque ut tortor tristique, laoreet ex et, tristique felis. Nullam quis felis a nulla lobortis vehicula ut vitae elit. Phasellus pretium, lorem quis aliquet blandit, sem ante cursus libero, at euismod augue nibh eu felis. Duis malesuada, mi nec condimentum pellentesque, eros dui tincidunt leo, at congue turpis urna a nulla. In hac habitasse platea dictumst.
+
+            Vestibulum non purus eget ligula sollicitudin pharetra. Praesent ornare varius eleifend. Mauris a diam vel risus vehicula laoreet at quis urna. Nulla facilisi. Pellentesque in augue et tortor tincidunt venenatis. Nunc risus quam, luctus non velit ac, iaculis tempus ligula. Mauris congue efficitur purus, sit amet euismod sapien. Curabitur eu purus ultrices, aliquet ante id, porttitor est. Sed ultrices leo id nulla ornare facilisis. Nunc ultrices molestie egestas. Quisque convallis turpis leo, eu bibendum ex mattis eu. Maecenas varius arcu quis mi varius, non feugiat orci molestie. Suspendisse eleifend risus velit, sed fringilla urna condimentum at. Etiam rhoncus tincidunt metus vel commodo. Aenean dictum id diam sed feugiat.
+            
+            Nam nec dignissim neque. Aenean gravida, libero eu porta pharetra, lorem ante iaculis elit, sit amet lacinia nunc lacus vitae ipsum. Praesent id porttitor neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi ante enim, facilisis quis tristique sit amet, auctor in enim. Sed id massa imperdiet, blandit ligula id, facilisis est. Vestibulum mi quam, efficitur in lectus et, pellentesque malesuada velit. Mauris euismod efficitur neque, sed lobortis lorem blandit et. Nunc porta justo turpis, at sodales tellus fringilla vestibulum. Proin ullamcorper turpis eu nibh commodo, ac cursus odio fringilla.
+            
+            Proin auctor molestie elit quis auctor. Phasellus posuere rhoncus magna nec interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet felis laoreet, feugiat risus bibendum, mollis est. Phasellus gravida massa et ligula viverra tristique. Sed gravida dictum placerat. Aliquam at tortor vitae quam lacinia sodales a ut sem. Curabitur viverra tellus at faucibus ultrices.</p>
+        <p class="relative-text"> 
+ 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper hendrerit felis vitae condimentum. Praesent ut justo diam. Nunc dolor mi, iaculis id cursus id, condimentum et felis. Maecenas iaculis non felis vel tincidunt. Donec vestibulum purus ex, non malesuada dolor porta vitae. Sed congue ac nisl vitae efficitur. Etiam eget dapibus augue, vitae feugiat est. Ut metus tellus, laoreet non felis id, sollicitudin maximus felis. Vivamus nulla justo, elementum nec turpis at, gravida tempor justo. Integer ligula neque, vestibulum dignissim eleifend in, sagittis eget turpis. Quisque nisl sem, finibus suscipit bibendum nec, luctus non sem. In nec ligula sed elit pretium faucibus et vitae nisi. Donec ac nibh ut felis vestibulum commodo nec ac ante. Pellentesque vitae ligula id nisl gravida mollis.
+            
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse rutrum nisi nibh, vel iaculis magna malesuada et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla sagittis diam tempus ipsum rutrum, sed semper sapien pharetra. Mauris ac mollis lacus. Mauris ut vestibulum purus. In hac habitasse platea dictumst. Pellentesque ac pretium turpis. Maecenas vel est feugiat, eleifend lorem vitae, efficitur augue. Proin a purus ligula. Nulla ut tempus neque.</p>
+        <p class="absolute-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at mi arcu. Curabitur in arcu tellus. Nullam tincidunt lacus interdum felis bibendum, ut fermentum mi mattis. Praesent ultrices ipsum nec quam fringilla, eget interdum diam convallis. Nulla eleifend nunc mauris. Nulla tempus pellentesque est et lacinia. Integer varius ac eros vitae venenatis. Proin convallis malesuada orci id venenatis. Sed vel massa gravida, ornare arcu vitae, imperdiet felis. Donec commodo neque elit, quis feugiat urna gravida quis. Nulla eget dolor at arcu egestas scelerisque. Maecenas cursus, sapien vitae tincidunt rutrum, lacus ex placerat sapien, a iaculis justo felis sit amet purus.</p>
+        <p class="fixed-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse a placerat mauris. Mauris massa lacus, blandit in risus quis, finibus congue eros. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam id aliquet eros. Quisque et felis purus. Nullam congue felis a sem blandit, sit amet facilisis sapien tincidunt. Ut orci purus, faucibus in vulputate vitae, tincidunt quis magna. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce efficitur libero porta consequat vestibulum. Aliquam mi augue, viverra vel pellentesque et, tristique id elit. Nulla ornare eu nibh ac molestie. Fusce nec turpis eget diam sodales sodales sagittis aliquam metus. Nam ut nisl sit amet metus maximus auctor at id nisl. Nunc pellentesque, arcu id placerat pellentesque, urna lectus faucibus est, quis semper nulla turpis congue massa.
+
+            Integer vitae sapien lacus. Cras vitae quam at velit dictum placerat convallis eu mauris. Quisque condimentum ut ex sit amet rutrum. In id posuere nulla. Nullam mattis lacus tortor. Mauris semper diam nibh, sit amet ullamcorper nisl congue nec. Phasellus dui leo, rhoncus scelerisque convallis in, porttitor quis est. Duis vel libero nec sapien viverra consectetur eu sed magna. Nam porta leo non rutrum facilisis. Donec facilisis metus non aliquet cursus. Phasellus turpis nisl, interdum sed dolor ut, placerat mollis odio.
+            
+            Fusce placerat augue sit amet laoreet vestibulum. Proin quis congue risus, laoreet fermentum lorem. Praesent lacinia sit amet dui id faucibus. Pellentesque orci ante, laoreet ut est eu, consequat hendrerit sapien. Phasellus rhoncus nec leo eu iaculis. Donec fringilla euismod felis, a ullamcorper ex accumsan quis. Duis pulvinar, neque quis fermentum tempus, nulla turpis fermentum mauris, vel imperdiet quam odio et turpis. Phasellus rutrum, libero et fringilla hendrerit, libero diam posuere elit, non mattis velit augue ac lectus. Vestibulum eu tortor ut magna posuere commodo vitae at magna. Nullam tempor bibendum posuere. Praesent tincidunt dui sit amet vulputate finibus. In libero ante, tempus ac nibh eget, varius semper enim. Etiam ut nunc ac massa sagittis suscipit.
+            
+            Suspendisse feugiat dolor a nisi commodo maximus. Aliquam elementum tristique tempus. Ut posuere velit in interdum tempor. Ut finibus nulla eu enim maximus pulvinar. Donec malesuada ullamcorper eros, eu vehicula nunc semper non. Cras euismod mauris eu nulla semper, facilisis blandit dolor maximus. Cras imperdiet, nisl vitae porta gravida, eros leo lacinia velit, quis aliquet odio nulla luctus tellus.</p>
+
+        <!-- Z-index primjeri -->
+        <p class="zindex-text-1">Z-index 1: Ovaj tekst je ispod ostalih jer ima najniži z-index.</p>
+        <p class="zindex-text-2">Z-index 2: Ovaj tekst je iznad onog s z-index 1, ali ispod onog s z-index 3.</p>
+        <p class="zindex-text-3">Z-index 3: Ovaj tekst je iznad svih jer ima najveći z-index.</p>
+    </div>
+</body>
+</html>
